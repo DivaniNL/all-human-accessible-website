@@ -1,36 +1,33 @@
-# All Human - Accessible Website
-
-Ontwerp en maak voor een opdrachtgever een component/pagina/site toegankelijk volgens WCAG richtlijnen.
-
+# The Client - Website
+Ontwerp en maak een website voor een opdrachtgever en bespreek het resultaat tijdens de Sprint Review.
 
 ## Context
-Deze leertaak hoort bij Sprint 3: All Human. 
+Deze leertaak hoort bij sprint 2 The Client. 
 Dit is een opdracht die je individueel uitvoert voor een opdrachtgever.
 
-
 ## Doel van deze opdracht
-Je leert hoe je een (gedeelte van een) website toegankelijk kan ontwerpen, bouwen en testen.
+Je leert je hoe je een opdracht voor een klant kan aanpakken. De opdracht die je krijgt, kan een hele website zijn, of een onderdeel van een bestaande website. 
 
 
 ## Werkwijze
-Deze leertaak wordt behandeld in Sprint 3. 
+Deze leertaak wordt behandeld in sprint 2. Er worden verschillende workshops aangeboden:
 
-Bij FDND begin je elke sprint met nieuwe HTML, CSS (en JS) code. Als je in dezelfde code doorwerkt, wordt het vaak een beetje een zooitje en pas je niet toe wat je in de tussentijd hebt geleerd. Begin dus altijd met nieuwe code schrijven.
-
-Er worden verschillende workshops aangeboden:
-
-- [Sprint planning](sprint-planning.md)
-- [User Experience van HTML](user-experience-van-html.md)
-- [Code/Design review toegankelijkheid](code-design-review-toegankelijkheid.md)
-- [Kleur en Contract](kleur-contrast.md)
-- [Sprint Review](sprint-review.md)
+- [Sprint planning](sprint-planning.md) - Maandag
+- [Briefing/debriefing](briefing-debriefing.md) - Maandag
+- [Prototyping](prototyping.md) 
+- [Flow layout](flow-layout.md) 
+- [Typografie en leesbaarheid](typografie-en-leesbaarheid.md) 
+- [Code conventies](code-conventies.md) 
+- [Sprint review](sprint-review.md) 
 
 
 ## Definition of done
-Deze opdracht is done als:
 
-- [ ] De website staat op GitHub en heeft een live url
+Deze opdracht is done als:
+- [ ] De website staat op Github en heeft een live url
 - [ ] Je hebt gestructureerd gewerkt met behulp van de development-lifecycle en je hebt het proces bijgehouden in jouw Learning Log
-- [ ] Je hebt een Lighthouse test gedaan en gevonden problemen verholpen
-- [ ] Je hebt een serie handmatige tests gedaan en gevonden problemen verholpen
-- [ ] Je hebt feedback gekregen van de opdrachtgever tijdens de Sprint Review en de feedback gedocumenteerd
+- [ ] Er is een volledige debriefing geschreven voor de opdrachtgever en de feedback van de opdrachtgever op de (eerste) debriefing is gedocumenteerd en verwerkt
+- [ ] Je hebt feedback gekregen van de opdrachtgever tijdens de Sprint review en de feedback gedocumenteerd
+- [ ] Je hebt verschillende variaties geschetst voor de responsive layout en een ontwerp gemaakt, en feedback gekregen in Github Issues
+- [ ] Je hebt het ontwerp gerealiseerd met HTML, CSS en/of JS, je hebt code uitgelegd en feedback gekregen in Github Issues
+
