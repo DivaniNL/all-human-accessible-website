@@ -100,7 +100,8 @@
                     transition: transform 0.25s ease-out;
                 }
                 
-                &:hover{
+                &:hover,
+                &:focus{
                     &:after{
                         transform: scaleX(1);
                         transform-origin: bottom left;
