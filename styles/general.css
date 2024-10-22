@@ -138,3 +138,20 @@ header + main{
         margin-top: 49px;
     }
 }
+
+/* UGLY SKIP TO THE CONTENT LINK */
+.skip-to-content-link {
+    background: rebeccapurple;
+    height: 30px;
+    left: 50%;
+    padding: 8px;
+    position: absolute;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+    color: white;
+    z-index: 999999;
+  }
+  
+  .skip-to-content-link:focus {
+    transform: translateY(0%);
+  }

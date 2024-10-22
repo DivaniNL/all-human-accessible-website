@@ -14,7 +14,23 @@
     </head>
 
     <body>
+        <a class="skip-to-content-link" href="#content">
+            Skip to content
+        </a>
         <header>
+            <div class="tagline">
+                <p><strong>Vrijdag 13 september</strong></p>
+                <p>voor de journalisten</p>
+            </div>
+            <a href="#home" class="logo" tabindex="2">
+                <img src="./assets/RedPers_Logo.webp" alt="Logo van Red Pers">
+            </a>
+            <button class="search-icon openSearchPopupButton" tabindex="4" aria-label="Search">Zoeken
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                    <path d="M29.7576 29.7C29.4645 29.9931 28.9892 29.9931 28.6961 29.7L19.8345 20.8385C19.0845 21.4769 18.222 21.9712 17.247 22.3212C16.272 22.6712 15.2922 22.8462 14.3076 22.8462C11.9051 22.8462 9.87178 22.0146 8.20765 20.3513C6.5435 18.6881 5.71143 16.6559 5.71143 14.2547C5.71143 11.8535 6.54304 9.81971 8.20626 8.15336C9.86949 6.48701 11.9017 5.65384 14.3029 5.65384C16.7041 5.65384 18.7379 6.4859 20.4042 8.15003C22.0706 9.81415 22.9037 11.8475 22.9037 14.25C22.9037 15.2923 22.7191 16.301 22.3499 17.276C21.9807 18.251 21.4961 19.0846 20.8961 19.7769L29.7576 28.6385C30.0508 28.9316 30.0508 29.4069 29.7576 29.7ZM14.3076 21.3462C16.298 21.3462 17.9783 20.6611 19.3484 19.2909C20.7186 17.9207 21.4037 16.2404 21.4037 14.25C21.4037 12.2596 20.7186 10.5793 19.3484 9.20914C17.9783 7.83894 16.298 7.15384 14.3076 7.15384C12.3172 7.15384 10.6369 7.83894 9.26673 9.20914C7.89655 10.5793 7.21146 12.2596 7.21146 14.25C7.21146 16.2404 7.89655 17.9207 9.26673 19.2909C10.6369 20.6611 12.3172 21.3462 14.3076 21.3462Z" fill="black" />
+                </svg>
+            </button>
+
             <input id="menu-toggle" class="hamburger" aria-label="Mobile-menu" aria-expanded="false" type="checkbox" tabindex="1" />
 
             <label for="menu-toggle">
@@ -33,28 +49,9 @@
                         fill="black"></path>
                 </svg>
             </label>
-
-            <a href="#home" class="logo" tabindex="2">
-                <img src="./assets/RedPers_Logo.webp" alt="Logo">
-            </a>
-        
-            <div class="tagline">
-                <p><strong>Vrijdag 13 september</strong></p>
-                <p>voor de journalisten</p>
-            </div>
             
             <nav>
-                <ul class="primary-navigation">
-                    <li><a href="./index.html">Voorpagina</a></li>
-                    <li><a href="./category/rubriek/binnenland/">Binnenland</a></li>
-                    <li><a href="./category/rubriek/buitenland/">Buitenland</a></li>
-                    <li><a href="./category/rubriek/columns/">Columns</a></li>
-                    <li><a href="./category/rubriek/economie/">Economie</a></li>
-                    <li><a href="./category/rubriek/kunst-media/">Kunst & Media</a></li>
-                    <li><a href="./category/rubriek/podcasts/">Podcasts</a></li>
-                    <li><a href="./category/rubriek/politiek/">Politiek</a></li>
-                    <li><a href="./category/rubriek/wetenschap/">Wetenschap</a></li>
-                </ul>
+            
         
                 <ul class="secondary-navigation topnav">
                     <li><a tabindex="1" href="">Colofon</a></li>
@@ -67,15 +64,22 @@
                     <li><a tabindex="3" href="#nieuwsbrief">Nieuwsbrief</a></li>
                     <li class="menubutton"><a tabindex="3" href="#doneren">Doneren</a></li>
                 </ul>
+                <ul class="primary-navigation">
+                    <li><a href="./index.html">Voorpagina</a></li>
+                    <li><a href="./category/rubriek/binnenland/">Binnenland</a></li>
+                    <li><a href="./category/rubriek/buitenland/">Buitenland</a></li>
+                    <li><a href="./category/rubriek/columns/">Columns</a></li>
+                    <li><a href="./category/rubriek/economie/">Economie</a></li>
+                    <li><a href="./category/rubriek/kunst-media/">Kunst & Media</a></li>
+                    <li><a href="./category/rubriek/podcasts/">Podcasts</a></li>
+                    <li><a href="./category/rubriek/politiek/">Politiek</a></li>
+                    <li><a href="./category/rubriek/wetenschap/">Wetenschap</a></li>
+                </ul>
             </nav>
         
-            <button class="search-icon openSearchPopupButton" tabindex="4" aria-label="Search">
-                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                    <path d="M29.7576 29.7C29.4645 29.9931 28.9892 29.9931 28.6961 29.7L19.8345 20.8385C19.0845 21.4769 18.222 21.9712 17.247 22.3212C16.272 22.6712 15.2922 22.8462 14.3076 22.8462C11.9051 22.8462 9.87178 22.0146 8.20765 20.3513C6.5435 18.6881 5.71143 16.6559 5.71143 14.2547C5.71143 11.8535 6.54304 9.81971 8.20626 8.15336C9.86949 6.48701 11.9017 5.65384 14.3029 5.65384C16.7041 5.65384 18.7379 6.4859 20.4042 8.15003C22.0706 9.81415 22.9037 11.8475 22.9037 14.25C22.9037 15.2923 22.7191 16.301 22.3499 17.276C21.9807 18.251 21.4961 19.0846 20.8961 19.7769L29.7576 28.6385C30.0508 28.9316 30.0508 29.4069 29.7576 29.7ZM14.3076 21.3462C16.298 21.3462 17.9783 20.6611 19.3484 19.2909C20.7186 17.9207 21.4037 16.2404 21.4037 14.25C21.4037 12.2596 20.7186 10.5793 19.3484 9.20914C17.9783 7.83894 16.298 7.15384 14.3076 7.15384C12.3172 7.15384 10.6369 7.83894 9.26673 9.20914C7.89655 10.5793 7.21146 12.2596 7.21146 14.25C7.21146 16.2404 7.89655 17.9207 9.26673 19.2909C10.6369 20.6611 12.3172 21.3462 14.3076 21.3462Z" fill="black" />
-                </svg>
-            </button>
+            
         </header>
-        <main>
+        <main id="content">
 
             <article>
                 <section id="intro_article">
