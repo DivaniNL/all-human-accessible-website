@@ -81,13 +81,14 @@ body{
         a.logo {
             display: inline-flex;
             justify-content: center;
+            transition: 0.3s ease;
             img {
                 max-width: 150px;
                 width: 150px;
             }
             @media (min-width: 860px){
                 position: absolute;
-                top: calc(2rem + 32px);
+                top: calc(2rem + 50px);
                 max-height: 36px;
                 left: 50%;
                 translate: -50% 0;
@@ -101,6 +102,7 @@ body{
             position: absolute;
             top: calc(100% + 1px);
             width: 100%;
+            transition: 0.3s ease;
             background-color: var(--white);
             >* {
                 line-height: 1.4em;
@@ -320,11 +322,18 @@ body{
             }
         }
         @media (min-width :860px){
-            padding-top: calc(2rem + 32px);
+            padding-top: calc(2rem + 40px);
             padding-left: 4rem;
             padding-right: 4rem;
             align-items: center;
             grid-template-columns: max-content 1fr min-content;
+            transition: 0.3s ease;
+            &.small{
+                padding-top: 2rem;
+                a.logo{
+                    top: 2rem;
+                }
+            }
         }
     }
 }

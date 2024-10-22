@@ -54,8 +54,7 @@ const ScrollActions = () => {
     const pos = document.documentElement.scrollTop;
     const calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scrollValue = Math.round(pos * 100 / calcHeight);
-    
-    console.log(scrollValue);
+
     // Check if newsletter popup needs to be shown
     if (scrollValue > 50 && !hasShownNewsletterPopup) { // Check if popup has not been shown yet
         console.log('Scroll value passed 50%');
@@ -177,3 +176,57 @@ popup.addEventListener('click', function(event) {
 window.onscroll = ScrollActions;
 
 
+
+
+
+// HIDE TAGLINE AFTER SCROLL MOBILE
+// Select the elements
+var tagline = document.querySelector('.tagline');
+var topnav = document.querySelector('.topnav');
+var primaryNav = document.querySelector('.primary-navigation');
+var header = document.querySelector('header');
+
+// State variables to track visibility
+let isTaglineHidden = false;
+let isTopNavHidden = false;
+let lastScrollY = 0; // Track the last scroll position
+
+// Function to handle show/hide logic
+function handleScroll() {
+    const currentScrollY = window.scrollY;
+    console.log(currentScrollY);
+    if (window.innerWidth < 860) { // Mobile view
+        if (currentScrollY > 100 && !isTaglineHidden) {
+            tagline.classList.add('hidden'); // Hide tagline
+            isTaglineHidden = true; // Update state
+        } else if (currentScrollY <= 100 && isTaglineHidden) {
+            tagline.classList.remove('hidden'); // Show tagline
+            isTaglineHidden = false; // Update state
+        }
+    } else { // Desktop view
+        if (currentScrollY > 126 && !isTopNavHidden) {
+            topnav.classList.add('hidden'); // Hide topnav
+            primaryNav.classList.add('hidden'); // Hide primary navigation
+            header.classList.add('small'); // Smaller header padding
+            isTopNavHidden = true; // Update state
+        } else if (currentScrollY < 89 && isTopNavHidden) {
+            topnav.classList.remove('hidden'); // Show topnav
+            primaryNav.classList.remove('hidden'); // Show primary navigation
+            header.classList.remove('small'); // Restore header padding
+            isTopNavHidden = false; // Update state
+        }
+        // Ensure tagline is always visible if the viewport is wider than 860px
+        tagline.classList.remove('hidden');
+        isTaglineHidden = false; // Reset tagline visibility for desktop
+    }
+
+    lastScrollY = currentScrollY; // Update last scroll position
+}
+
+// Attach the scroll event listener
+window.addEventListener('scroll', handleScroll);
+// Attach the resize event listener to handle changes in viewport
+window.addEventListener('resize', handleScroll);
+
+// Initial call to handle display on page load
+handleScroll();
