@@ -212,7 +212,7 @@
                     margin-bottom: 16px;
                 }
 
-                h4{
+                h3, h4{
                     margin-bottom: 8px;
                     font-size: 15px;
                     line-height: 1.25em;
@@ -239,7 +239,7 @@
 
                     .personinfo{
                         grid-area: info;
-                        h3{
+                        h2, h3, h4{
                             font-size: 15px;
                             line-height: 1.25em;
                             margin-bottom: 8px;
