@@ -40,13 +40,14 @@ footer{
                 margin-top: 2rem;
             }
 
-            h4{
+            h2{
                 font-weight: 500;
                 text-transform: uppercase;
                 letter-spacing: 1px;
                 font-size: 13px;
                 line-height: 2rem;
                 margin-bottom: 10px;
+                font-family: var(--base-font);
             }
 
             ul{
@@ -55,7 +56,10 @@ footer{
                 padding: 0;
                 margin: 0;
                 li{
-                    a{
+                    height: 32px;
+                    display: flex;
+                    align-items: center;
+                    a, button{
                         color: var(--black);
                         font-size: 13px;
                         line-height: 32px;
@@ -81,6 +85,11 @@ footer{
                                 transform-origin: bottom left;
                             }
                         }
+                    }
+                    button{
+                        height: 16px;
+                        display: flex;
+                        align-items: center;
                     }
                 }
             }
@@ -115,10 +124,17 @@ footer{
                 display: flex;
                 margin: 0;
                 gap: 10px;
+                align-items: center;
                 li{
                     font-size: 14px;
                     line-height: 20px;
+                    height: 15px;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    padding-right: 10px;
                     a{
+                        line-height: 1em;
                         color: var(--black);
                         position: relative;
                         &:after {
@@ -141,6 +157,13 @@ footer{
                                 transform: scaleX(1);
                                 transform-origin: bottom left;
                             }
+                        }
+                    }
+                    &:not(:last-child){
+                        &:after{
+                            content: "|";
+                            position: absolute;
+                            left: 100%;
                         }
                     }
                 }

@@ -66,7 +66,7 @@ a{
 }
 @media (prefers-contrast: more){
     :root{
-        --red: #D72F19;
+        --red: #9B2212;
         --brownred: #8B504B;
         --grey-text: #757575;
     }

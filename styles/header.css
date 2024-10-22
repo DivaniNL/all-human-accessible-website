@@ -164,7 +164,9 @@ body{
                 gap: 2em;
 
                 >li {
-                    &:not(.menubutton) >a {
+                    display: flex;
+                    align-items: center;
+                    &:not(.menubutton) >a, button{
                         color: var(--black);
                         position: relative;
                         @media (min-width: 860px){
@@ -193,6 +195,11 @@ body{
                                 transform-origin: bottom left;
                             }
                         }
+                    }
+                    button{
+                        height: 16px;
+                        display: flex;
+                        align-items: center;
                     }
                     &.menubutton {
                         >a {
