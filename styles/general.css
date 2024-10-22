@@ -75,6 +75,9 @@ a{
 .hidden{
     display: none !important;
 }
+.hidden_title{
+    font-size: 0;
+}
 button, 
 input[type="submit"], 
 input[type="reset"] {
@@ -108,7 +111,9 @@ h1,
     line-height: 1.2em;
     letter-spacing: -1px;
 }
-
+em {
+    font-size: inherit;
+}
 /* default search popup */
 #search-popup{
     display: none;
