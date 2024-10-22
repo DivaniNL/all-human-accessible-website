@@ -17,12 +17,9 @@
                 padding: 20px 0;
                 background-color: white;
                 z-index: 4;
-                @media (min-width: 680px){
-                    top: 177px;
-                }
-    
+
                 @media (min-width: 860px){
-                    top: 162px;
+                    top: 186px;
                 }
             }
             .playbtn, .utility_btn{

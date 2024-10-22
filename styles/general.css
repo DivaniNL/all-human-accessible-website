@@ -134,4 +134,7 @@ body.has-popup{
 
 header + main{
     margin-top: 56px;
+    @media (min-width: 860px){
+        margin-top: 49px;
+    }
 }
