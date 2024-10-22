@@ -59,6 +59,28 @@ footer{
                         color: var(--black);
                         font-size: 13px;
                         line-height: 32px;
+                        position: relative;
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            transform: scaleX(0);
+                            height: 2px;
+                            bottom: -3px;
+                            left: 0;
+                            background-color: var(--black);
+                            transform-origin: bottom right;
+                            transition: transform 0.25s ease-out;
+                        }
+
+                        &:hover,
+                        &:focus,
+                        &.active {
+                            &:after {
+                                transform: scaleX(1);
+                                transform-origin: bottom left;
+                            }
+                        }
                     }
                 }
             }
@@ -98,6 +120,28 @@ footer{
                     line-height: 20px;
                     a{
                         color: var(--black);
+                        position: relative;
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            transform: scaleX(0);
+                            height: 2px;
+                            bottom: -3px;
+                            left: 0;
+                            background-color: var(--black);
+                            transform-origin: bottom right;
+                            transition: transform 0.25s ease-out;
+                        }
+
+                        &:hover,
+                        &:focus,
+                        &.active {
+                            &:after {
+                                transform: scaleX(1);
+                                transform-origin: bottom left;
+                            }
+                        }
                     }
                 }
             }
