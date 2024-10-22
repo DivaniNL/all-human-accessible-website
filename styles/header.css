@@ -56,6 +56,13 @@ body{
             display: flex;
             flex-direction: column;
             left: -100%;
+            @media (max-width: 859px){
+                ul{
+                    li{
+                        display: none;
+                    }
+                }
+            }
             @media (min-width: 860px){
                 display: block;
             }
@@ -63,6 +70,13 @@ body{
         .hamburger:checked ~ nav{
 
             left: 0%;
+            @media (max-width: 859px){
+                ul{
+                    li{
+                        display: initial;
+                    }
+                }
+            }
         }
         a.logo {
             display: inline-flex;

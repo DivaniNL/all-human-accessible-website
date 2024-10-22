@@ -28,6 +28,26 @@ function showPopUp(popupname) {
         }
     }
     document.body.classList.add('has-popup'); // Add class to body
+    // Find all visible 'select', 'input', 'textarea', 'button', and 'a' elements
+    var inputs = Array.from(document.querySelectorAll('select, input, textarea, button, a')).filter(function(el) {
+        return el.offsetParent !== null;  // Check if the element is visible
+    });
+
+    // Iterate through each visible element
+    inputs.forEach(function(el) {
+        var tbindex = el.getAttribute("tabindex");  // Get the current tabindex
+        el.setAttribute("data-index", tbindex);  // Store the tabindex in a data-index attribute
+        el.setAttribute("tabindex", -1);  // Set tabindex to -1
+    });
+
+    // Find all elements inside a div with the class 'popup' and set tabindex to 2
+    var popupElements = document.querySelectorAll('.popup select, .popup input, .popup textarea, .popup button, .popup a');
+
+    // Iterate through each element inside the popup
+    popupElements.forEach(function(el) {
+        el.setAttribute("tabindex", 2);  // Set tabindex to 2
+    });
+
 }
 
 const ScrollActions = () => {
@@ -56,12 +76,32 @@ const ScrollActions = () => {
 
 // Function to close all popups
 function closeAllPopups() {
-    console.log('test');
     let allPopups = document.querySelectorAll('.popup'); // Select all popup elements
     allPopups.forEach(popup => {
         popup.style.display = 'none'; // Hide each popup
     });
     document.body.classList.remove('has-popup'); // Remove popup-related class from body
+    // Find all visible 'select', 'input', 'textarea', 'button', and 'a' elements
+    var inputs = Array.from(document.querySelectorAll('select, input, textarea, button, a')).filter(function(el) {
+        return el.offsetParent !== null;  // Check if the element is visible
+    });
+
+    // Iterate through each visible element
+    inputs.forEach(function(el) {
+        var tbindex = el.getAttribute("data-index");  // Get the value of data-index attribute
+        if (tbindex) {  // If data-index exists, set it as the tabindex
+            el.setAttribute("tabindex", tbindex);
+        }
+    });
+
+    // Find all elements inside a div with the class 'popup' and set tabindex to -1
+    var popupElements = document.querySelectorAll('.popup select, .popup input, .popup textarea, .popup button, .popup a');
+
+    // Iterate through each element inside the popup
+    popupElements.forEach(function(el) {
+        el.setAttribute("tabindex", -1);  // Set tabindex to -1 for popup elements
+    });
+
 }
 
 // Event listener for closing popups
