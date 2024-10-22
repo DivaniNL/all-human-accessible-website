@@ -4,6 +4,20 @@ const mainContent = document.getElementById('main_content');
 const article_btns = document.querySelector('.article_btns');
 const popup = document.querySelector('.popup'); // Select your popup element
 
+
+// TAGLINE ACTUAL DATE
+
+
+const weekdays = ["Zondag", "Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag"];
+const months = ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"];
+const today = new Date();
+const formattedDate = `${weekdays[today.getDay()]} ${today.getDate()} ${months[today.getMonth()]}`;
+document.getElementById("formattedDate").textContent = formattedDate;
+
+
+
+
+
 function showPopUp(popupname) {
     if (popupname) {
         console.log(popupname);
@@ -121,3 +135,5 @@ popup.addEventListener('click', function(event) {
 
 // Scroll actions listener
 window.onscroll = ScrollActions;
+
+
