@@ -204,12 +204,12 @@ function handleScroll() {
             isTaglineHidden = false; // Update state
         }
     } else { // Desktop view
-        if (currentScrollY > 126 && !isTopNavHidden) {
+        if (currentScrollY > 136 && !isTopNavHidden && !header.classList.contains('small')) {
             topnav.classList.add('hidden'); // Hide topnav
             primaryNav.classList.add('hidden'); // Hide primary navigation
             header.classList.add('small'); // Smaller header padding
             isTopNavHidden = true; // Update state
-        } else if (currentScrollY < 89 && isTopNavHidden) {
+        } else if (currentScrollY < 89 && isTopNavHidden && header.classList.contains('small')) {
             topnav.classList.remove('hidden'); // Show topnav
             primaryNav.classList.remove('hidden'); // Show primary navigation
             header.classList.remove('small'); // Restore header padding
