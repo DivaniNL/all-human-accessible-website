@@ -155,8 +155,8 @@ header + main{
     transition: transform 0.3s;
     color: white;
     z-index: 999999;
-  }
-  
-  .skip-to-content-link:focus {
+}
+
+.skip-to-content-link:focus {
     transform: translate(-50%, 0%);
-  }
+}
