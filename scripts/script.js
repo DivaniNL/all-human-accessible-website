@@ -4,9 +4,7 @@ const mainContent = document.getElementById('main_content');
 const article_btns = document.querySelector('.article_btns');
 const popup = document.querySelector('.popup'); // Select your popup element
 
-
 // TAGLINE ACTUAL DATE
-
 
 const weekdays = ["Zondag", "Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag"];
 const months = ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"];
@@ -14,15 +12,9 @@ const today = new Date();
 const formattedDate = `${weekdays[today.getDay()]} ${today.getDate()} ${months[today.getMonth()]}`;
 document.getElementById("formattedDate").textContent = formattedDate;
 
-
-
-
-
 function showPopUp(popupname) {
     if (popupname) {
-        console.log(popupname);
         let selectedPopUp = document.querySelector("[data-popup='" + popupname + "']");
-        console.log(selectedPopUp);
         if (selectedPopUp) {
             selectedPopUp.style.display = 'block'; // Show the popup
         }
@@ -57,7 +49,6 @@ const ScrollActions = () => {
 
     // Check if newsletter popup needs to be shown
     if (scrollValue > 50 && !hasShownNewsletterPopup) { // Check if popup has not been shown yet
-        console.log('Scroll value passed 50%');
         showPopUp("nieuwsbrief_popup");
         hasShownNewsletterPopup = true; // Set the flag to true
     }
@@ -175,10 +166,6 @@ popup.addEventListener('click', function(event) {
 // Scroll actions listener
 window.onscroll = ScrollActions;
 
-
-
-
-
 // HIDE TAGLINE AFTER SCROLL MOBILE
 // Select the elements
 var tagline = document.querySelector('.tagline');
@@ -194,7 +181,6 @@ let lastScrollY = 0; // Track the last scroll position
 // Function to handle show/hide logic
 function handleScroll() {
     const currentScrollY = window.scrollY;
-    console.log(currentScrollY);
     if (window.innerWidth < 860) { // Mobile view
         if (currentScrollY > 100 && !isTaglineHidden) {
             tagline.classList.add('hidden'); // Hide tagline
