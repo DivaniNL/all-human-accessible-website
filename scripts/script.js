@@ -14,7 +14,7 @@ document.getElementById("formattedDate").textContent = formattedDate;
 
 function showPopUp(popupname) {
     if (popupname) {
-        let selectedPopUp = document.querySelector("[data-popup='" + popupname + "']");
+        let selectedPopUp = document.querySelector("[data-popup='" + popupname + "']"); // Find the popup that matches with the parameter of the funtion.
         if (selectedPopUp) {
             selectedPopUp.style.display = 'block'; // Show the popup
         }
@@ -190,6 +190,7 @@ function handleScroll() {
             isTaglineHidden = false; // Update state
         }
     } else { // Desktop view
+        // I have added a difference of 47px between the open threshold and the close threshold, otherwise the header will stutter between an open and closed phase. This happens because the padding in the header gets increased. Then it triggers it back because it reaches the scroll limit again. This is an infinite loop.
         if (currentScrollY > 136 && !isTopNavHidden && !header.classList.contains('small')) {
             topnav.classList.add('hidden'); // Hide topnav
             primaryNav.classList.add('hidden'); // Hide primary navigation
