@@ -45,8 +45,8 @@ a{
     --dark-grey-text: #7A7A7A;
     --light-border: #E1E1E1;
     --red: #E85340;
-    --light-red: #F9D4CF;
-    --lighter-red: #F9CDC8;
+    --light-red: #F9D4CF; /* omdraaien met hieronder */
+    --lighter-red: #F9CDC8; /* omdraaien met hierboven */
     --lightest-red: #FFF4F2;
     --brownred: #AF726B;
     --greybg: #636363;
