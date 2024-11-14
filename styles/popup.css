@@ -46,7 +46,7 @@
                     clip-path: var(--white);
                 }
             }
-            &:hover {
+            &:hover, &:focus {
                 background-position: top;
             }
             @media (min-width: 400px){
