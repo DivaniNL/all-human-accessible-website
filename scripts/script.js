@@ -136,7 +136,7 @@ document.querySelector('.utility_btn.textsize').addEventListener("click", functi
     }
 });
 
-// Close popup when Escape key is pressed
+// Close popup when Escape key is pressed TEST
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') { // Check if the pressed key is "Escape"
         closeAllPopups();
